@@ -233,6 +233,99 @@
             
               
                 
+                <a class="post-title-link" href="/2017/02/18/LeetCode-14-Longest-Common-Prefix/" itemprop="url">
+                  LeetCode:14.Longest Common Prefix
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-02-18T10:35:56+08:00" content="2017-02-18">
+              2017-02-18
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">Write a function to find the longest common prefix string amongst an array of strings.</div><div class="line">思想：拿第一个 str 作为标准，后面的字符串依次做比对。</div><div class="line">复杂度：时间复杂度 O(nm), 空间复杂度 O(m), m 是第一个字符串的长度。</div><div class="line">这题的关键在于，不断缩减比对的长度，例如下一个比对的长度小于当前，则最小长度就变成了下一个的长度，</div><div class="line">如果同下一个比对的过程中出现不匹配，则最小长度又变成了不匹配长度位置的上一位。</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="keyword">import</span> Foundation</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">longestCommonPrefix</span><span class="params">(<span class="number">_</span> strs: [String])</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">guard</span> strs.<span class="built_in">count</span> &gt; <span class="number">0</span> <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">""</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> compareArray = [<span class="type">Character</span>](strs[<span class="number">0</span>].characters)</div><div class="line"></div><div class="line">    <span class="keyword">for</span> s <span class="keyword">in</span> strs &#123;</div><div class="line">        <span class="keyword">let</span> currentArray = [<span class="type">Character</span>](s.characters)</div><div class="line"></div><div class="line">        <span class="comment">//因为始终共有长度是最小长度，所以每次都用最小长度去作为下一次比较的基础</span></div><div class="line">        <span class="keyword">if</span> compareArray.<span class="built_in">count</span> &gt; currentArray.<span class="built_in">count</span> &#123;</div><div class="line">            compareArray = <span class="type">Array</span>(compareArray[<span class="number">0</span> ..&lt; currentArray.<span class="built_in">count</span>])</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..&lt;compareArray.<span class="built_in">count</span> &#123;</div><div class="line">            <span class="keyword">if</span> currentArray[i] != compareArray[i] &#123;</div><div class="line">                compareArray = <span class="type">Array</span>(compareArray[<span class="number">0</span> ..&lt; i])</div><div class="line">                <span class="keyword">break</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>  <span class="type">String</span>(compareArray)</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">print</span>(longestCommonPrefix([<span class="string">"abc"</span>, <span class="string">"ab"</span>, <span class="string">"ab"</span>, <span class="string">"abc"</span>]))</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/02/10/hello-world/" itemprop="url">
                   Hello 2017
                 </a>
@@ -347,13 +440,20 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
           
 
         </nav>
