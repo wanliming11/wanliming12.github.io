@@ -84,15 +84,25 @@
 
 
 
-<meta name="description" content="万力铭的世界">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FlyingPuPu world">
-<meta property="og:url" content="http://macan999server.com/index.html">
+<meta name="description" content="冒泡排序
+决定冒泡的方向，每次冒泡相邻元素比较，每次固定一个泡。
+如果一趟未产生任何交换，则整个序列已排序，无需再比较。
+时间复杂度：比较的次数n-1 … 1 , 总和 O(n^2) ,  空间复杂度 O(1)12345678910111213141516171819202122232425262728293031int a[100] = &amp;#123;1, 2, 10, 3, 5, 4, 2&amp;#1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="内排序">
+<meta property="og:url" content="http://macan999server.com/2017/03/10/内排序/index.html">
 <meta property="og:site_name" content="FlyingPuPu world">
-<meta property="og:description" content="万力铭的世界">
+<meta property="og:description" content="冒泡排序
+决定冒泡的方向，每次冒泡相邻元素比较，每次固定一个泡。
+如果一趟未产生任何交换，则整个序列已排序，无需再比较。
+时间复杂度：比较的次数n-1 … 1 , 总和 O(n^2) ,  空间复杂度 O(1)12345678910111213141516171819202122232425262728293031int a[100] = &amp;#123;1, 2, 10, 3, 5, 4, 2&amp;#1">
+<meta property="og:updated_time" content="2017-03-10T14:23:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FlyingPuPu world">
-<meta name="twitter:description" content="万力铭的世界">
+<meta name="twitter:title" content="内排序">
+<meta name="twitter:description" content="冒泡排序
+决定冒泡的方向，每次冒泡相邻元素比较，每次固定一个泡。
+如果一趟未产生任何交换，则整个序列已排序，无需再比较。
+时间复杂度：比较的次数n-1 … 1 , 总和 O(n^2) ,  空间复杂度 O(1)12345678910111213141516171819202122232425262728293031int a[100] = &amp;#123;1, 2, 10, 3, 5, 4, 2&amp;#1">
 
 
 
@@ -110,7 +120,7 @@
   };
 </script>
 
-  <title> FlyingPuPu world </title>
+  <title> 内排序 | FlyingPuPu world </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -131,9 +141,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -210,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -232,10 +240,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/10/内排序/" itemprop="url">
-                  内排序
-                </a>
+                内排序
               
             
           </h1>
@@ -275,9 +280,7 @@
       
 
       
-        
-          
-            <h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><ul>
+        <h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><ul>
 <li>决定冒泡的方向，每次冒泡相邻元素比较，每次固定一个泡。</li>
 <li>如果一趟未产生任何交换，则整个序列已排序，无需再比较。</li>
 <li>时间复杂度：比较的次数n-1 … 1 , 总和 O(n^2) ,  空间复杂度 O(1)<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a[<span class="number">100</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">10</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">2</span>&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (i != j) &#123;</div><div class="line">        <span class="keyword">int</span> t = a[i];</div><div class="line">        a[i] = a[j];</div><div class="line">        a[j] = t;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//冒泡排序, 从小到大</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123; <span class="comment">//每次要确定的冒泡元素</span></div><div class="line">        <span class="keyword">int</span> sorted = <span class="number">1</span>;   <span class="comment">//做一个优化，如果一趟排序中都没有产生交换，则不需要以后操作</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = n - <span class="number">1</span>; j &gt; i; j--) &#123; <span class="comment">//从后往前冒</span></div><div class="line">            <span class="keyword">if</span> (a[j] &lt; a[j - <span class="number">1</span>]) &#123;</div><div class="line">                swap(j, j<span class="number">-1</span>);</div><div class="line">                sorted = <span class="number">0</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (sorted == <span class="number">1</span>) &#123;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -303,16 +306,19 @@
 <li>因为快排拥有比较好的平均时间复杂度，所以快排用的范围相对来说更广一些。</li>
 </ul>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -320,206 +326,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/02/18/LeetCode-14-Longest-Common-Prefix/" rel="next" title="LeetCode:14.Longest Common Prefix">
+                <i class="fa fa-chevron-left"></i> LeetCode:14.Longest Common Prefix
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2017/02/18/LeetCode-14-Longest-Common-Prefix/" itemprop="url">
-                  LeetCode:14.Longest Common Prefix
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2017-02-18T10:35:56+08:00" content="2017-02-18">
-              2017-02-18
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">Write a function to find the longest common prefix string amongst an array of strings.</div><div class="line">思想：拿第一个 str 作为标准，后面的字符串依次做比对。</div><div class="line">复杂度：时间复杂度 O(nm), 空间复杂度 O(m), m 是第一个字符串的长度。</div><div class="line">这题的关键在于，不断缩减比对的长度，例如下一个比对的长度小于当前，则最小长度就变成了下一个的长度，</div><div class="line">如果同下一个比对的过程中出现不匹配，则最小长度又变成了不匹配长度位置的上一位。</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="keyword">import</span> Foundation</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">longestCommonPrefix</span><span class="params">(<span class="number">_</span> strs: [String])</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">guard</span> strs.<span class="built_in">count</span> &gt; <span class="number">0</span> <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">""</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> compareArray = [<span class="type">Character</span>](strs[<span class="number">0</span>].characters)</div><div class="line"></div><div class="line">    <span class="keyword">for</span> s <span class="keyword">in</span> strs &#123;</div><div class="line">        <span class="keyword">let</span> currentArray = [<span class="type">Character</span>](s.characters)</div><div class="line"></div><div class="line">        <span class="comment">//因为始终共有长度是最小长度，所以每次都用最小长度去作为下一次比较的基础</span></div><div class="line">        <span class="keyword">if</span> compareArray.<span class="built_in">count</span> &gt; currentArray.<span class="built_in">count</span> &#123;</div><div class="line">            compareArray = <span class="type">Array</span>(compareArray[<span class="number">0</span> ..&lt; currentArray.<span class="built_in">count</span>])</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..&lt;compareArray.<span class="built_in">count</span> &#123;</div><div class="line">            <span class="keyword">if</span> currentArray[i] != compareArray[i] &#123;</div><div class="line">                compareArray = <span class="type">Array</span>(compareArray[<span class="number">0</span> ..&lt; i])</div><div class="line">                <span class="keyword">break</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>  <span class="type">String</span>(compareArray)</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">print</span>(longestCommonPrefix([<span class="string">"abc"</span>, <span class="string">"ab"</span>, <span class="string">"ab"</span>, <span class="string">"abc"</span>]))</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/10/hello-world/" itemprop="url">
-                  Hello 2017
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2017-02-10T23:16:54+08:00" content="2017-02-10">
-              2017-02-10
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>​    过去那些年，一直放置片段和心声之于 Evernote 和 Bear，未来的日子里，终于要开博了，无论好坏，这都是一个谨慎而更加认真的开始。反观目前的现状，未来的日子要不断面临压力和挑战，无论是学习还是工作，都必将无比精彩，那些挥之不去的过去，那些期盼已久的未来，都是来年要走的不归路。</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -527,6 +359,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -546,8 +382,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -590,6 +435,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-number">2.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入排序"><span class="nav-number">3.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择排序"><span class="nav-number">4.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -686,6 +542,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
