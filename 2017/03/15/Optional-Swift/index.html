@@ -84,49 +84,16 @@
 
 
 
-<meta name="description" content="常用命令
-swift package init –type library      创建library
-
-swift build
-
-swift test
-​
-SPM 的架构
-
-
-Package.swift 构建依赖关系
-123456let package = Package(    name: &quot;BST&quot;,    targets: [        Target(name: &quot;Main&quot;, de">
+<meta name="description" content="guard 的好处12345678//Optional 本质上是一个枚举，.none(nil) , .some(T)//有值会自动升级为.some , nil 会自动升级为 .none//注意guard 的用法，如果要在多处用同一个 unwarpinglet a: Int? = 1guard let nextA = a else &amp;#123;    return&amp;#125;//以后都可以用next">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SPM for Swift">
-<meta property="og:url" content="http://macan999server.com/2017/03/11/SPM-for-Swift/index.html">
+<meta property="og:title" content="Optional-Swift">
+<meta property="og:url" content="http://macan999server.com/2017/03/15/Optional-Swift/index.html">
 <meta property="og:site_name" content="FlyingPuPu world">
-<meta property="og:description" content="常用命令
-swift package init –type library      创建library
-
-swift build
-
-swift test
-​
-SPM 的架构
-
-
-Package.swift 构建依赖关系
-123456let package = Package(    name: &quot;BST&quot;,    targets: [        Target(name: &quot;Main&quot;, de">
-<meta property="og:updated_time" content="2017-03-11T03:57:57.000Z">
+<meta property="og:description" content="guard 的好处12345678//Optional 本质上是一个枚举，.none(nil) , .some(T)//有值会自动升级为.some , nil 会自动升级为 .none//注意guard 的用法，如果要在多处用同一个 unwarpinglet a: Int? = 1guard let nextA = a else &amp;#123;    return&amp;#125;//以后都可以用next">
+<meta property="og:updated_time" content="2017-03-15T07:31:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SPM for Swift">
-<meta name="twitter:description" content="常用命令
-swift package init –type library      创建library
-
-swift build
-
-swift test
-​
-SPM 的架构
-
-
-Package.swift 构建依赖关系
-123456let package = Package(    name: &quot;BST&quot;,    targets: [        Target(name: &quot;Main&quot;, de">
+<meta name="twitter:title" content="Optional-Swift">
+<meta name="twitter:description" content="guard 的好处12345678//Optional 本质上是一个枚举，.none(nil) , .some(T)//有值会自动升级为.some , nil 会自动升级为 .none//注意guard 的用法，如果要在多处用同一个 unwarpinglet a: Int? = 1guard let nextA = a else &amp;#123;    return&amp;#125;//以后都可以用next">
 
 
 
@@ -144,7 +111,7 @@ Package.swift 构建依赖关系
   };
 </script>
 
-  <title> SPM for Swift | FlyingPuPu world </title>
+  <title> Optional-Swift | FlyingPuPu world </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -264,7 +231,7 @@ Package.swift 构建依赖关系
             
             
               
-                SPM for Swift
+                Optional-Swift
               
             
           </h1>
@@ -276,8 +243,8 @@ Package.swift 构建依赖关系
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-03-11T11:57:21+08:00" content="2017-03-11">
-              2017-03-11
+            <time itemprop="dateCreated" datetime="2017-03-15T15:28:50+08:00" content="2017-03-15">
+              2017-03-15
             </time>
           </span>
 
@@ -304,25 +271,10 @@ Package.swift 构建依赖关系
       
 
       
-        <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
-<li><p>swift package init –type library      创建library</p>
-</li>
-<li><p>swift build</p>
-</li>
-<li><p>swift test</p>
-<p>​</p>
-<h3 id="SPM-的架构"><a href="#SPM-的架构" class="headerlink" title="SPM 的架构"></a>SPM 的架构</h3></li>
-</ul>
-<ol>
-<li><p>Package.swift 构建依赖关系</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> package = <span class="type">Package</span>(</div><div class="line">    name: <span class="string">"BST"</span>,</div><div class="line">    targets: [</div><div class="line">        <span class="type">Target</span>(name: <span class="string">"Main"</span>, dependencies: [<span class="string">"BST"</span>])</div><div class="line">    ]</div><div class="line">)</div></pre></td></tr></table></figure>
-</li>
-<li><p>Sources 目录下面用目录包含各个module</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="type">Sources</span></div><div class="line">├── <span class="type">BST</span></div><div class="line">│   └── <span class="type">BST</span>.swift</div><div class="line">└── <span class="type">Main</span></div><div class="line">    └── main.swift</div></pre></td></tr></table></figure>
-</li>
-<li><p>然后执行 swift build 命令，根据依赖关系，找到main入口，就可以生成可执行文件，并调用相关 module 了。</p>
-</li>
-</ol>
+        <h3 id="guard-的好处"><a href="#guard-的好处" class="headerlink" title="guard 的好处"></a>guard 的好处</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Optional 本质上是一个枚举，.none(nil) , .some(T)</span></div><div class="line"><span class="comment">//有值会自动升级为.some , nil 会自动升级为 .none</span></div><div class="line"><span class="comment">//注意guard 的用法，如果要在多处用同一个 unwarping</span></div><div class="line"><span class="keyword">let</span> a: <span class="type">Int</span>? = <span class="number">1</span></div><div class="line"><span class="keyword">guard</span> <span class="keyword">let</span> nextA = a <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//以后都可以用nextA, 不用一直unwraping</span></div></pre></td></tr></table></figure>
+<h3 id="闭包行为"><a href="#闭包行为" class="headerlink" title="闭包行为"></a>闭包行为</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//对比一下和JS的闭包行为, swift 闭包捕获的是值，而 JS 捕获的是对象</span></div><div class="line"><span class="keyword">var</span> array: [<span class="type">Closure</span>] = []</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>...<span class="number">5</span> &#123;</div><div class="line">   array.append(&#123; <span class="built_in">print</span>(i)&#125;)</div><div class="line">&#125;</div><div class="line">array[<span class="number">0</span>]()</div><div class="line">array[<span class="number">1</span>]()</div><div class="line">array[<span class="number">2</span>]()</div><div class="line">array[<span class="number">3</span>]()</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> funcArray = []</div><div class="line"></div><div class="line"><span class="comment">// for (let i in [0, 1, 2])&#123; </span></div><div class="line"><span class="comment">//如果变成let 则是0，1， 2，var 则是2，2，2</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>])&#123;</div><div class="line">    funcArray[i] = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(i);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">funcArray[<span class="number">0</span>]();</div><div class="line">funcArray[<span class="number">1</span>]();</div><div class="line">funcArray[<span class="number">2</span>]();</div></pre></td></tr></table></figure>
+<h3 id="Never-关键字"><a href="#Never-关键字" class="headerlink" title="Never 关键字"></a>Never 关键字</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Never 意味着永远不会正确返回</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">returnNever</span><span class="params">(<span class="number">_</span> input: Int)</span></span> -&gt; <span class="type">Never</span> &#123;</div><div class="line">    <span class="keyword">guard</span> input &gt; <span class="number">0</span> <span class="keyword">else</span> &#123;</div><div class="line">        <span class="built_in">fatalError</span>()</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">fatalError</span>()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -347,16 +299,16 @@ Package.swift 构建依赖关系
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/10/内排序/" rel="next" title="内排序">
-                <i class="fa fa-chevron-left"></i> 内排序
+              <a href="/2017/03/14/Collection-Swift/" rel="next" title="Collection-Swift">
+                <i class="fa fa-chevron-left"></i> Collection-Swift
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/11/tree/" rel="prev" title="Tree">
-                Tree <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/15/ControlFlow-Swift/" rel="prev" title="ControlFlow-Swift">
+                ControlFlow-Swift <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -464,7 +416,7 @@ Package.swift 构建依赖关系
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPM-的架构"><span class="nav-number">2.</span> <span class="nav-text">SPM 的架构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#guard-的好处"><span class="nav-number">1.</span> <span class="nav-text">guard 的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包行为"><span class="nav-number">2.</span> <span class="nav-text">闭包行为</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Never-关键字"><span class="nav-number">3.</span> <span class="nav-text">Never 关键字</span></a></li></ol></div>
             
           </div>
         </section>

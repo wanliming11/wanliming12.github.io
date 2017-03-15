@@ -84,49 +84,16 @@
 
 
 
-<meta name="description" content="常用命令
-swift package init –type library      创建library
-
-swift build
-
-swift test
-​
-SPM 的架构
-
-
-Package.swift 构建依赖关系
-123456let package = Package(    name: &quot;BST&quot;,    targets: [        Target(name: &quot;Main&quot;, de">
+<meta name="description" content="基本控制1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950var x = 0;repeat &amp;#123;    x += 1    print(x)    if x &amp;gt; 3 &amp;#123;        continue    &amp;#125;    if x &amp;gt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SPM for Swift">
-<meta property="og:url" content="http://macan999server.com/2017/03/11/SPM-for-Swift/index.html">
+<meta property="og:title" content="ControlFlow-Swift">
+<meta property="og:url" content="http://macan999server.com/2017/03/15/ControlFlow-Swift/index.html">
 <meta property="og:site_name" content="FlyingPuPu world">
-<meta property="og:description" content="常用命令
-swift package init –type library      创建library
-
-swift build
-
-swift test
-​
-SPM 的架构
-
-
-Package.swift 构建依赖关系
-123456let package = Package(    name: &quot;BST&quot;,    targets: [        Target(name: &quot;Main&quot;, de">
-<meta property="og:updated_time" content="2017-03-11T03:57:57.000Z">
+<meta property="og:description" content="基本控制1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950var x = 0;repeat &amp;#123;    x += 1    print(x)    if x &amp;gt; 3 &amp;#123;        continue    &amp;#125;    if x &amp;gt">
+<meta property="og:updated_time" content="2017-03-15T07:30:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SPM for Swift">
-<meta name="twitter:description" content="常用命令
-swift package init –type library      创建library
-
-swift build
-
-swift test
-​
-SPM 的架构
-
-
-Package.swift 构建依赖关系
-123456let package = Package(    name: &quot;BST&quot;,    targets: [        Target(name: &quot;Main&quot;, de">
+<meta name="twitter:title" content="ControlFlow-Swift">
+<meta name="twitter:description" content="基本控制1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950var x = 0;repeat &amp;#123;    x += 1    print(x)    if x &amp;gt; 3 &amp;#123;        continue    &amp;#125;    if x &amp;gt">
 
 
 
@@ -144,7 +111,7 @@ Package.swift 构建依赖关系
   };
 </script>
 
-  <title> SPM for Swift | FlyingPuPu world </title>
+  <title> ControlFlow-Swift | FlyingPuPu world </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -264,7 +231,7 @@ Package.swift 构建依赖关系
             
             
               
-                SPM for Swift
+                ControlFlow-Swift
               
             
           </h1>
@@ -276,8 +243,8 @@ Package.swift 构建依赖关系
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-03-11T11:57:21+08:00" content="2017-03-11">
-              2017-03-11
+            <time itemprop="dateCreated" datetime="2017-03-15T15:29:55+08:00" content="2017-03-15">
+              2017-03-15
             </time>
           </span>
 
@@ -304,26 +271,8 @@ Package.swift 构建依赖关系
       
 
       
-        <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
-<li><p>swift package init –type library      创建library</p>
-</li>
-<li><p>swift build</p>
-</li>
-<li><p>swift test</p>
-<p>​</p>
-<h3 id="SPM-的架构"><a href="#SPM-的架构" class="headerlink" title="SPM 的架构"></a>SPM 的架构</h3></li>
-</ul>
-<ol>
-<li><p>Package.swift 构建依赖关系</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> package = <span class="type">Package</span>(</div><div class="line">    name: <span class="string">"BST"</span>,</div><div class="line">    targets: [</div><div class="line">        <span class="type">Target</span>(name: <span class="string">"Main"</span>, dependencies: [<span class="string">"BST"</span>])</div><div class="line">    ]</div><div class="line">)</div></pre></td></tr></table></figure>
-</li>
-<li><p>Sources 目录下面用目录包含各个module</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="type">Sources</span></div><div class="line">├── <span class="type">BST</span></div><div class="line">│   └── <span class="type">BST</span>.swift</div><div class="line">└── <span class="type">Main</span></div><div class="line">    └── main.swift</div></pre></td></tr></table></figure>
-</li>
-<li><p>然后执行 swift build 命令，根据依赖关系，找到main入口，就可以生成可执行文件，并调用相关 module 了。</p>
-</li>
-</ol>
-
+        <h3 id="基本控制"><a href="#基本控制" class="headerlink" title="基本控制"></a>基本控制</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">0</span>;</div><div class="line"><span class="keyword">repeat</span> &#123;</div><div class="line">    x += <span class="number">1</span></div><div class="line">    <span class="built_in">print</span>(x)</div><div class="line">    <span class="keyword">if</span> x &gt; <span class="number">3</span> &#123;</div><div class="line">        <span class="keyword">continue</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> x &gt; <span class="number">4</span> &#123;</div><div class="line">        <span class="keyword">break</span></div><div class="line">    &#125;</div><div class="line">&#125; <span class="keyword">while</span> x &lt; <span class="number">5</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> p1 = (<span class="number">12</span>, <span class="number">13</span>)</div><div class="line"><span class="keyword">if</span> <span class="keyword">case</span> (<span class="number">12</span>, <span class="number">13</span>) = p1 &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"equal"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//value binding</span></div><div class="line"><span class="keyword">let</span> p2 = <span class="string">"hello"</span></div><div class="line"><span class="keyword">switch</span> p1 &#123;</div><div class="line"><span class="keyword">case</span> (<span class="number">0</span>, <span class="number">0</span>):</div><div class="line">    <span class="built_in">print</span>(<span class="string">"====="</span>)</div><div class="line"></div><div class="line"><span class="keyword">case</span> <span class="keyword">is</span> <span class="type">String</span>:</div><div class="line">    <span class="built_in">print</span>(<span class="string">"is String"</span>)</div><div class="line"></div><div class="line"><span class="keyword">default</span>:</div><div class="line">    <span class="keyword">break</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">defer</span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"Must do something"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> skills = [<span class="string">"JS"</span>, <span class="literal">nil</span>, <span class="string">"C"</span>, <span class="literal">nil</span>]</div><div class="line"><span class="keyword">for</span> <span class="keyword">case</span> <span class="keyword">let</span> skill? <span class="keyword">in</span> skills &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"Get <span class="subst">\(skill)</span> "</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> percentage = <span class="number">0.5</span></div><div class="line"><span class="comment">//Range 匹配</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">case</span> <span class="number">0</span>...<span class="number">1</span> = percentage &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"In range"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> name = <span class="string">"FPP"</span></div><div class="line"><span class="keyword">let</span> age = <span class="number">34</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">case</span> (<span class="string">"FPP"</span>, <span class="number">34</span>) = (name, age) &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"Match user"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="自定义约等"><a href="#自定义约等" class="headerlink" title="自定义约等"></a>自定义约等</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//样式匹配背后的准则</span></div><div class="line"><span class="comment">//Range ~= T 由系统实现了， 对应到了 if case 0...1 = percentage</span></div><div class="line"><span class="comment">//打印 ~  =  就是约等</span></div><div class="line"><span class="function"><span class="keyword">func</span> ~=&lt;T&gt;<span class="params">(value: T, pattern: ClosedRange&lt;T&gt;)</span></span> -&gt; <span class="type">Bool</span> &#123;</div><div class="line">    <span class="keyword">return</span> pattern.<span class="built_in">contains</span>(value)</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> <span class="keyword">case</span> <span class="number">0.5</span> = <span class="number">0.0</span>...<span class="number">1.0</span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"自定义约等"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -347,17 +296,13 @@ Package.swift 构建依赖关系
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/10/内排序/" rel="next" title="内排序">
-                <i class="fa fa-chevron-left"></i> 内排序
+              <a href="/2017/03/15/Optional-Swift/" rel="next" title="Optional-Swift">
+                <i class="fa fa-chevron-left"></i> Optional-Swift
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/11/tree/" rel="prev" title="Tree">
-                Tree <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -464,7 +409,7 @@ Package.swift 构建依赖关系
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPM-的架构"><span class="nav-number">2.</span> <span class="nav-text">SPM 的架构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本控制"><span class="nav-number">1.</span> <span class="nav-text">基本控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义约等"><span class="nav-number">2.</span> <span class="nav-text">自定义约等</span></a></li></ol></div>
             
           </div>
         </section>
