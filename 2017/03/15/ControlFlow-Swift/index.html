@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://macan999server.com/2017/03/15/ControlFlow-Swift/index.html">
 <meta property="og:site_name" content="FlyingPuPu world">
 <meta property="og:description" content="基本控制1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950var x = 0;repeat &amp;#123;    x += 1    print(x)    if x &amp;gt; 3 &amp;#123;        continue    &amp;#125;    if x &amp;gt">
-<meta property="og:updated_time" content="2017-03-15T07:30:28.000Z">
+<meta property="og:updated_time" content="2017-04-15T01:29:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ControlFlow-Swift">
 <meta name="twitter:description" content="基本控制1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950var x = 0;repeat &amp;#123;    x += 1    print(x)    if x &amp;gt; 3 &amp;#123;        continue    &amp;#125;    if x &amp;gt">
@@ -230,7 +230,7 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
 
     
       <header class="post-header">
@@ -259,6 +259,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Swift/" itemprop="url" rel="index">
+                    <span itemprop="name">Swift</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -283,6 +302,7 @@
       
         <h3 id="基本控制"><a href="#基本控制" class="headerlink" title="基本控制"></a>基本控制</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">0</span>;</div><div class="line"><span class="keyword">repeat</span> &#123;</div><div class="line">    x += <span class="number">1</span></div><div class="line">    <span class="built_in">print</span>(x)</div><div class="line">    <span class="keyword">if</span> x &gt; <span class="number">3</span> &#123;</div><div class="line">        <span class="keyword">continue</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> x &gt; <span class="number">4</span> &#123;</div><div class="line">        <span class="keyword">break</span></div><div class="line">    &#125;</div><div class="line">&#125; <span class="keyword">while</span> x &lt; <span class="number">5</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> p1 = (<span class="number">12</span>, <span class="number">13</span>)</div><div class="line"><span class="keyword">if</span> <span class="keyword">case</span> (<span class="number">12</span>, <span class="number">13</span>) = p1 &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"equal"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//value binding</span></div><div class="line"><span class="keyword">let</span> p2 = <span class="string">"hello"</span></div><div class="line"><span class="keyword">switch</span> p1 &#123;</div><div class="line"><span class="keyword">case</span> (<span class="number">0</span>, <span class="number">0</span>):</div><div class="line">    <span class="built_in">print</span>(<span class="string">"====="</span>)</div><div class="line"></div><div class="line"><span class="keyword">case</span> <span class="keyword">is</span> <span class="type">String</span>:</div><div class="line">    <span class="built_in">print</span>(<span class="string">"is String"</span>)</div><div class="line"></div><div class="line"><span class="keyword">default</span>:</div><div class="line">    <span class="keyword">break</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">defer</span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"Must do something"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> skills = [<span class="string">"JS"</span>, <span class="literal">nil</span>, <span class="string">"C"</span>, <span class="literal">nil</span>]</div><div class="line"><span class="keyword">for</span> <span class="keyword">case</span> <span class="keyword">let</span> skill? <span class="keyword">in</span> skills &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"Get <span class="subst">\(skill)</span> "</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> percentage = <span class="number">0.5</span></div><div class="line"><span class="comment">//Range 匹配</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">case</span> <span class="number">0</span>...<span class="number">1</span> = percentage &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"In range"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> name = <span class="string">"FPP"</span></div><div class="line"><span class="keyword">let</span> age = <span class="number">34</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">case</span> (<span class="string">"FPP"</span>, <span class="number">34</span>) = (name, age) &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"Match user"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="自定义约等"><a href="#自定义约等" class="headerlink" title="自定义约等"></a>自定义约等</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//样式匹配背后的准则</span></div><div class="line"><span class="comment">//Range ~= T 由系统实现了， 对应到了 if case 0...1 = percentage</span></div><div class="line"><span class="comment">//打印 ~  =  就是约等</span></div><div class="line"><span class="function"><span class="keyword">func</span> ~=&lt;T&gt;<span class="params">(value: T, pattern: ClosedRange&lt;T&gt;)</span></span> -&gt; <span class="type">Bool</span> &#123;</div><div class="line">    <span class="keyword">return</span> pattern.<span class="built_in">contains</span>(value)</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> <span class="keyword">case</span> <span class="number">0.5</span> = <span class="number">0.0</span>...<span class="number">1.0</span> &#123;</div><div class="line">    <span class="built_in">print</span>(<span class="string">"自定义约等"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -392,19 +412,12 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
-          
-            <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">标签</span>
-              
-            </div>
           
 
         </nav>
