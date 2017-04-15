@@ -243,119 +243,6 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/15/hello-world/" itemprop="url">
-                  Hello 2017
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-15T10:20:59+08:00" content="2017-04-15">
-              2017-04-15
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Mine/" itemprop="url" rel="index">
-                    <span itemprop="name">Mine</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>​    过去那些年，一直放置片段和心声之于 Evernote 和 Bear，未来的日子里，终于要开博了，无论好坏，这都是一个谨慎而更加认真的开始。反观目前的现状，未来的日子要不断面临压力和挑战，无论是学习还是工作，都必将无比精彩，那些挥之不去的过去，那些期盼已久的未来，都是来年要走的不归路。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2017/03/16/Closure-Swift/" itemprop="url">
                   Closure-Swift
                 </a>
@@ -1402,6 +1289,119 @@
         
           
             <figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">Write a function to find the longest common prefix string amongst an array of strings.</div><div class="line">思想：拿第一个 str 作为标准，后面的字符串依次做比对。</div><div class="line">复杂度：时间复杂度 O(nm), 空间复杂度 O(m), m 是第一个字符串的长度。</div><div class="line">这题的关键在于，不断缩减比对的长度，例如下一个比对的长度小于当前，则最小长度就变成了下一个的长度，</div><div class="line">如果同下一个比对的过程中出现不匹配，则最小长度又变成了不匹配长度位置的上一位。</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="keyword">import</span> Foundation</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">longestCommonPrefix</span><span class="params">(<span class="number">_</span> strs: [String])</span></span> -&gt; <span class="type">String</span> &#123;</div><div class="line">    <span class="keyword">guard</span> strs.<span class="built_in">count</span> &gt; <span class="number">0</span> <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">""</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> compareArray = [<span class="type">Character</span>](strs[<span class="number">0</span>].characters)</div><div class="line"></div><div class="line">    <span class="keyword">for</span> s <span class="keyword">in</span> strs &#123;</div><div class="line">        <span class="keyword">let</span> currentArray = [<span class="type">Character</span>](s.characters)</div><div class="line"></div><div class="line">        <span class="comment">//因为始终共有长度是最小长度，所以每次都用最小长度去作为下一次比较的基础</span></div><div class="line">        <span class="keyword">if</span> compareArray.<span class="built_in">count</span> &gt; currentArray.<span class="built_in">count</span> &#123;</div><div class="line">            compareArray = <span class="type">Array</span>(compareArray[<span class="number">0</span> ..&lt; currentArray.<span class="built_in">count</span>])</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..&lt;compareArray.<span class="built_in">count</span> &#123;</div><div class="line">            <span class="keyword">if</span> currentArray[i] != compareArray[i] &#123;</div><div class="line">                compareArray = <span class="type">Array</span>(compareArray[<span class="number">0</span> ..&lt; i])</div><div class="line">                <span class="keyword">break</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span>  <span class="type">String</span>(compareArray)</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">print</span>(longestCommonPrefix([<span class="string">"abc"</span>, <span class="string">"ab"</span>, <span class="string">"ab"</span>, <span class="string">"abc"</span>]))</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/01/hello-world/" itemprop="url">
+                  Hello 2017
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-01T11:11:11+08:00" content="2017-01-01">
+              2017-01-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Mine/" itemprop="url" rel="index">
+                    <span itemprop="name">Mine</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>​    过去那些年，一直放置片段和心声之于 Evernote 和 Bear，未来的日子里，终于要开博了，无论好坏，这都是一个谨慎而更加认真的开始。反观目前的现状，未来的日子要不断面临压力和挑战，无论是学习还是工作，都必将无比精彩，那些挥之不去的过去，那些期盼已久的未来，都是来年要走的不归路。</p>
+
           
         
       
