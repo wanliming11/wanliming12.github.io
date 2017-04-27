@@ -243,6 +243,132 @@
             
               
                 
+                <a class="post-title-link" href="/2017/04/27/Compress-in-iOS/" itemprop="url">
+                  Compress in iOS
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-27T17:06:37+08:00" content="2017-04-27">
+              2017-04-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><p>无论的视频还是图像，压缩都包括压缩分辨率和质量，视频还包括音频的采样。</p>
+<h3 id="iOS-视频压缩报告"><a href="#iOS-视频压缩报告" class="headerlink" title="iOS 视频压缩报告"></a>iOS 视频压缩报告</h3><p>iOS 自带视频压缩接口 AVAssetExportSession，我们先看系统的这些压缩的输出数据(先忽略黄字)，选用主流720P和1080P视频录制格式</p>
+<p><img src="http://oedbfiet1.bkt.clouddn.com/20170427149328422477119.png" alt=""></p>
+<p>可见在我们选择系统的960<em>540的默认输出分辨率和相同的音频AAC采样率的情况，同伟大的鹅🐧厂还是有差别的<br>4.6MB 对 1.1MB<br>既然基本的压缩比例还是不够高，那就要从输入和输出着手，对音频和视频做重采样，其实也是一些直播里面常用到的，通过<br>AVAssetReader 和 AVAssetWrite 同步进行transcode .<br>目前的优化比例如上图所示，1.6~1.7M 对应540</em>960 在一个还可以的视频质量的范围。</p>
+<h3 id="iOS-图片压缩报告"><a href="#iOS-图片压缩报告" class="headerlink" title="iOS 图片压缩报告"></a>iOS 图片压缩报告</h3><p>JPG格式每个平台都有自己的图片压缩方式，先看系统的压缩<br><img src="http://oedbfiet1.bkt.clouddn.com/2017042714932842546254.png" alt=""><br>但是这个只能作为参考，因为JPG 的压缩算法本身还依赖与图片内部的元素，压缩的原则关注两点:</p>
+<ol>
+<li>质量不能太差，一般维持在0.7左右的压缩质量。</li>
+<li>过大的分辨率对于手机来说，一般没有太多的展示空间，所以参考的手机的可用最大分辨率来作为压缩分辨率的一种策略，<br>例如鹅厂的960*1280.</li>
+</ol>
+<h3 id="目前结论"><a href="#目前结论" class="headerlink" title="目前结论"></a>目前结论</h3><ul>
+<li>视频压缩，可以参考目前的压缩比率，应该是一个可以接收的范围。</li>
+<li>图片压缩维持0.7的质量加上以手机的最大分辨率这两点做为压缩的标准。</li>
+</ul>
+<h3 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h3><p>GitHub: VideoToolboxPlus, SDAVAssetExportSession<br>Apple:   RosyWriter</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/16/Closure-Swift/" itemprop="url">
                   Closure-Swift
                 </a>
@@ -1316,122 +1442,13 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/01/hello-world/" itemprop="url">
-                  Hello 2017
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-01T11:11:11+08:00" content="2017-01-01">
-              2017-01-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Mine/" itemprop="url" rel="index">
-                    <span itemprop="name">Mine</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>​    过去那些年，一直放置片段和心声之于 Evernote 和 Bear，未来的日子里，终于要开博了，无论好坏，这都是一个谨慎而更加认真的开始。反观目前的现状，未来的日子要不断面临压力和挑战，无论是学习还是工作，都必将无比精彩，那些挥之不去的过去，那些期盼已久的未来，都是来年要走的不归路。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1470,7 +1487,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
