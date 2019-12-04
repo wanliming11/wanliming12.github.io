@@ -1,6 +1,7 @@
-# 跨平台文档中心
+# VuePress 使用说明
 
 ## 文档中心框架
+
 使用`VuePress` 构建 -- [https://vuepress.vuejs.org/zh/](https://vuepress.vuejs.org/zh/)
 
 ## 文档规范
@@ -29,8 +30,6 @@ yarn docs:dev
 
 2. 浏览器打开：[http://localhost:8080/](http://localhost:8080/)
 3. 修改文档，保存，浏览器会自动刷新预览
-
-
 
 ### 服务开机自启
 
@@ -70,4 +69,4 @@ pm2 logs docs
 
 ### 发布
 
-todo
+由于最终是链接到了 `GitHub`, 所以需要把 `docs\.vuepress\dist\` 里面的内容拷贝到根目录。

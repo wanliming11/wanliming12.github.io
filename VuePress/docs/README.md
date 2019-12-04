@@ -5,7 +5,7 @@
 # 3. 右上角隐藏位置放置对基础架构组和跨平台架构组内部人员开放的组件框架设计图和增加桥接 API 的方法。
 home: true
 heroImage: 
-heroText: 跨平台架构组文档中心
+heroText: 欢迎来到小万叔叔的世界
 # tagline:     /
 actionText: Get Started →
 actionLink: /common/
@@ -22,11 +22,5 @@ footer: MIT Licensed | Copyright © 2019-present Douyu
 ---
 
 
-## **使用跨平台技术开发活动，小程序和 Web 页面**
-![通用API文档](./images/func.png)
-
-## **跨平台沉浸式调试开发体验**
-![通用API文档](./images/debugTools.png)
-
-## **跨平台 API 想搜就搜**
-![通用API文档](./images/API.png)
+## **小程序**
+![通用API文档](https://ndyoxq.by.files.1drv.com/y4mVUTzvUe5OIlGBjfuZDV0K47XemQMUABzYsXGb2CxowqTIz3jDDVKapPzDtaIl2ULMs_X0wWu6KJMlACvEwWO3ufmXzhue5OziRfE2MPEW3Pfl1vxsiokZOmkz1aKM83flUJ89GzEdckDB8LJM_uWhAHFzMUTI3LX3hMl2nN0210M0XZtiL6WzEaGbHMn-sYTbctLHVgw76yNRj23W-vJoA?width=1914&height=1286&cropmode=none)
