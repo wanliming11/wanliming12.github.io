@@ -40,15 +40,15 @@ module.exports = {
       //   ]
       // },
       // 下拉列表
-      {
-        text: '进阶功能(敬请期待)',
-        items: [
-          {
-            text: '内部文档',
-            link: '/test/'
-          }
-        ]
-      }        
+      // {
+      //   text: '进阶功能(敬请期待)',
+      //   items: [
+      //     {
+      //       text: '内部文档',
+      //       link: '/test/'
+      //     }
+      //   ]
+      // }        
     ],
     sidebar:{
     	'/test/':[
