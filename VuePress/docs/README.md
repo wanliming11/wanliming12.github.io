@@ -4,7 +4,7 @@ heroImage:
 heroText: Welcome to the world of UncleWan!
 # tagline:     /
 actionText: Get Started →
-actionLink: /test/
+actionLink: /MurlocOne/
 # features:
 # - title: 简洁至上
 #   details:  
@@ -14,7 +14,7 @@ actionLink: /test/
 #   details:  
 sidebar: true
 layout: SpecialLayout
-footer: MIT Licensed | Copyright © 2019-present Douyu
+footer: MIT Licensed | Copyright © 2019-present MurlocWan
 ---
 
 
