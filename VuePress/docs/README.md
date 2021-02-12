@@ -20,7 +20,7 @@ footer: MIT Licensed | Copyright © 2019-present MurlocWan
 
 ## [基本功](/MurlocOne/Base/)
 
-## [团队](/MurlocOne/Team/)
+## [团队与个人成长](/MurlocOne/Team/)
 
 ## [设计](/MurlocOne/Design/)
 
