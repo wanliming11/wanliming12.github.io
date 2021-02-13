@@ -1,5 +1,7 @@
 # 基本功
 
+## 0. 基础思想
+[横向和纵向思维的扩充](https://www.notion.so/wanliming/ef68d115d86040dda3b9c56459f170ce)
 ## 1. Algo
 
 ### 1.1 并查集
