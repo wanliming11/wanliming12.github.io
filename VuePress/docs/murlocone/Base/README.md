@@ -23,6 +23,9 @@
 ### 1.5 快慢指针
 [19. 删除链表的倒数第 N 个结点](https://www.notion.so/wanliming/LeetCode-19-N-21ad120986854979995200ed3e00c2eb)
 
+### 1.6 数组
+[766. 托普利茨矩阵](https://www.notion.so/wanliming/LeetCode-766-85a787bdaf734ae5862867f13c4aeb54)
+
 ## 2. Design
 ### 2.1 
 
