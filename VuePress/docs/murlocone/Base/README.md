@@ -40,4 +40,4 @@
 
 ## 3. GrowUp
 ### 3.1 
-[时间的尽头](https://www.notion.so/wanliming/ff89a082fcad4676b39c705779eabb04)
+[时间的尽头](https://www.notion.so/wanliming/23ead907c0234a7dbab3240a4f27fbea)
