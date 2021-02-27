@@ -29,7 +29,7 @@
 ### 1.6 数组
 [766. 托普利茨矩阵](https://www.notion.so/wanliming/LeetCode-766-85a787bdaf734ae5862867f13c4aeb54)
 
-### 1.7 字符串395. 至少有 K 个重复字符的最长子串
+### 1.7 字符串
 [395. 至少有 K 个重复字符的最长子串](https://www.notion.so/wanliming/395-K-2d668ae6c90246ffb5c5ad0c62e1e8ce)
 
 ## 2. Design
