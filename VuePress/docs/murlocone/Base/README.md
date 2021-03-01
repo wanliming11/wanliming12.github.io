@@ -29,6 +29,7 @@
 ### 1.6 数组
 [766. 托普利茨矩阵](https://www.notion.so/wanliming/LeetCode-766-85a787bdaf734ae5862867f13c4aeb54)
 [896. 单调数列](https://www.notion.so/wanliming/896-28a01bd5d88141ce9ae31c99edb16348)
+[303. 区域和检索 - 数组不可变](https://www.notion.so/wanliming/303-22f00fa4ba4349d6a49f10aa841af4f4)
 
 ### 1.7 字符串
 [395. 至少有 K 个重复字符的最长子串](https://www.notion.so/wanliming/395-K-2d668ae6c90246ffb5c5ad0c62e1e8ce)
